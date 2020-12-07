@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: practice-ruby-mysql
+    env_file:
+      - ./.env
+    ports:
+      - 4206:3306
+      - 4207:33060
+    volumes:
+      - practice-ruby-mysql-mydata:/var/lib/mysql
+
+volumes:
+  practice-ruby-mysql-mydata:
