@@ -17,8 +17,8 @@ development:
   database: ruby_practice_api
   username: root
   password: password
-  host: 127.0.0.1
-  port: 4206
+  host: <%= ENV['DEV_DB_HOST'] %>
+  port: <%= ENV['DEV_DB_PORT'] %>
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
