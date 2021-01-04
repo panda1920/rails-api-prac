@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: practice-ruby-mysql
+    env_file:
+      - docker/.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - 4206:3306
+      - 4207:33060
+    volumes:
+      - practice-ruby-mysql-mydata:/var/lib/mysql
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/api.dev.yml
+    image: panda1920/my-rails-dev
+    container_name: practice-ruby-api
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0"
+    environment:
+      - DEV_DB_HOST=mysql
+      - DEV_DB_PORT=3306
+    ports:
+      - 3005:3000
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql
+
+volumes:
+  practice-ruby-mysql-mydata:
