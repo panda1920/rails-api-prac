@@ -1,0 +1,8 @@
+ja:
+  json_msg: 'これはJSONメッセージです'
+  enums:
+    studio:
+      studio_type:
+        firstParty: 'ファーストパーティ'
+        secondParty: 'セカンドパーティ'
+        thirdParty: 'サードパーティ'

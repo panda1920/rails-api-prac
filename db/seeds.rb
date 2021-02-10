@@ -8,6 +8,7 @@
 STUDIO_DATA = [
     { 
         name: 'CDPR', country: 'Poland',
+        studio_type: :thirdParty,
         games: [
             { title: 'Witcher 3', year: 2015 },
             { title: 'Cyberpunk 2077', year: 2020 },
@@ -15,14 +16,23 @@ STUDIO_DATA = [
     },
     {
         name: 'Mojang Studios', country: 'Sweden',
+        studio_type: :thirdParty,
         games: [
             { title: 'Minecraft', year: 2011 },
         ]
     },
     {
         name: 'Firaxis Games', country: 'USA',
+        studio_type: :thirdParty,
         games: [
             { title: 'Civilization 6', year: 2016 },
+        ]
+    },
+    {
+        name: 'Nintendo', country: 'Japan',
+        studio_type: :firstParty,
+        games: [
+            { title: 'Super Smash Bros. Ultimate', year: 2018 },
         ]
     },
 ]

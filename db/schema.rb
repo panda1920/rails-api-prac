@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_04_053743) do
+ActiveRecord::Schema.define(version: 2021_02_09_114827) do
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_01_04_053743) do
     t.string "country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "studio_type"
   end
 
 end

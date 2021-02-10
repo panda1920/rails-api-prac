@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  json_msg: 'This is a json message'
+  enums:
+    studio:
+      studio_type:
+        firstParty: 'first party'
+        secondParty: 'second party'
+        thirdParty: 'third party'
