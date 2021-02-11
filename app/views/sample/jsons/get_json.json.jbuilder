@@ -1,8 +1,7 @@
 json.studios do
     json.array! @studios do |studio|
-        json.name studio.name
-        json.country studio.country
-        json.studio_type studio.studio_type
+        json.partial! 'studio', locals: { studio: studio }
     end
 end
 json.message t('json_msg')
+json.lang 'en'
