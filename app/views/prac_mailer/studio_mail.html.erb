@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      .studio {
+        background-color: grey;
+        color: white;
+        font-size: 14;
+        margin-bottom: 5px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <%= @studios.each do |studio| %>
+      <div class='studio'>
+        <p>Name: <%= studio.name %></p>
+        <p>Country: <%= studio.country %></p>
+        <p>Type: <%= studio.studio_type %></p>
+      </div>
+    <% end %>
+  </body>
+</html>

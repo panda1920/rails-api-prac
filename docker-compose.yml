@@ -24,6 +24,8 @@ services:
     environment:
       - DEV_DB_HOST=mysql
       - DEV_DB_PORT=3306
+    env_file:
+      - .env
     ports:
       - 3005:3000
     volumes:

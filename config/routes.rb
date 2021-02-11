@@ -31,6 +31,9 @@ Rails.application.routes.draw do
             end
         end
         get 'random', to: 'random#get_random'
+
+        get 'mail', to: 'random_mail#send_random_mail'
+        get 'studio-mail', to: 'random_mail#send_studio_mail'
     end
   end
 end
