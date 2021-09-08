@@ -34,6 +34,13 @@ Rails.application.routes.draw do
 
         get 'mail', to: 'random_mail#send_random_mail'
         get 'studio-mail', to: 'random_mail#send_studio_mail'
+
+        scope :session do
+            get 'get', to: 'session#get_cookie'
+            get 'set', to: 'session#set_cookie'
+            get 'remove', to: 'session#remove_cookie'
+            post 'post', to: 'session#post_cookie'
+        end
     end
   end
 end

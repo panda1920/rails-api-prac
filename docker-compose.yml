@@ -33,5 +33,14 @@ services:
     depends_on:
       - mysql
 
+  frontend:
+    image: nginx
+    container_name: practice-ruby-frontend
+    ports:
+      - 3004:80
+      - 3003:443
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html
+
 volumes:
   practice-ruby-mysql-mydata:
