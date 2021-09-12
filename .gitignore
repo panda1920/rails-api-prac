@@ -39,3 +39,7 @@
 
 # ignore installed dependencies
 vendor/bundle/*
+
+# ignore ssl certificate related files
+*.pem
+passphrase.txt
