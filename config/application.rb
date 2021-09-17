@@ -38,7 +38,8 @@ module Api
     # https://stackoverflow.com/questions/15342710/adding-cookie-session-store-back-to-rails-api-app
     # if secure: true, no cookies would be sent from rails on http
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore, secure: false, key: '_my_app_session'
+    # config.middleware.use ActionDispatch::Session::CookieStore, secure: false, key: '_my_app_session'
+    config.middleware.use ActionDispatch::Session::CookieStore, secure: true, key: '_my_app_session'
     # config.middleware.use ActionDispatch::ContentSecurityPolicy::Middleware # ?
     config.middleware.insert_after(ActionDispatch::Cookies, ActionDispatch::Session::CookieStore, key: '_my_app_session')
 

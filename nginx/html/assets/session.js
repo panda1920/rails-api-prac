@@ -4,12 +4,14 @@ const $submitButton = document.getElementById('submit');
 const $getSessionButton = document.getElementById('get-session');
 const $result = document.getElementById('result');
 
+const API_ENDPOINT = '';
+
 $submitButton.addEventListener('click', async () => {
   const payload = {
     hello: $helloInput.value,
     world: $worldInput.value,
   };
-  const response = await fetch('http://localhost:3005/sample/api/session/post', {
+  const response = await fetch(`${API_ENDPOINT}/sample/api/session/post`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -22,7 +24,7 @@ $submitButton.addEventListener('click', async () => {
 });
 
 $getSessionButton.addEventListener('click', async () => {
-  const response = await fetch('http://localhost:3005/sample/api/session/get', {
+  const response = await fetch(`${API_ENDPOINT}/sample/api/session/get`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
