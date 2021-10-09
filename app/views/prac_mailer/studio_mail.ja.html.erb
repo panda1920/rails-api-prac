@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-    <style>
-      .studio {
-        background-color: grey;
-        color: white;
-        font-size: 14;
-        margin-bottom: 5px;
-        padding: 10px;
-        border-radius: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <% @studios.each do |studio| %>
-      <div class='studio'>
-        <p>スタジオ名: <%= studio.name %></p>
-        <p>所在国: <%= studio.country %></p>
-        <p>タイプ: <%= studio.studio_type_i18n %></p>
-        <p>メッセージ: <%= I18n.t(:json_msg) %></p>
-      </div>
-    <% end %>
-  </body>
-</html>
+<style>
+  .studio {
+    background-color: grey;
+    color: white;
+    font-size: 14;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+</style>
+
+<% @studios.each do |studio| %>
+  <div class='studio'>
+    <p>スタジオ名: <%= studio.name %></p>
+    <p>所在国: <%= studio.country %></p>
+    <p>タイプ: <%= studio.studio_type_i18n %></p>
+    <p>メッセージ: <%= I18n.t(:json_msg) %></p>
+  </div>
+<% end %>
